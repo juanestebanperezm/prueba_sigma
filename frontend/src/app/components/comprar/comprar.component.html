@@ -1,0 +1,69 @@
+<body>
+    <div class="container">
+        <img class="img-fluid" src="http://sigmatest.sigmastorage.online/sources/bg-2.png" alt="">
+    </div>
+
+
+    <div class="card container">
+
+    <div class="card-title" *ngFor="let x of producto">
+      <h1 class="text-center text-uppercase">NOMBRE COMPRA {{x.name}}</h1>
+    </div>
+      
+    <div class="container-fluid" *ngFor="let x of producto">
+      <h4 class="lead">Total: {{x.price}}</h4>
+      <h4 class="lead">Impuesto: {{x.tax}}</h4>
+
+     <h4 class="lead">Descuento: {{now}}%</h4>
+     <hr>
+     <h5 *ngIf="now==20" class="lead">Total compra: {{x.price-((20/100)*x.price)}} </h5>
+     
+      <h5 *ngIf="now!==20" class="lead">Total compra: {{x.price}}</h5>
+    </div>
+      
+    
+
+
+      <div class="card-body">
+        <form [formGroup]="conctacForm">
+          <div class="form-group">
+            <label for="">Nombre</label>
+            <input type="text" name="nombre" formControlName="nombre"
+              placeholder="Ingresa tu nombre" class="form-control">
+          </div>
+
+          <br>
+
+          <div class="form-group">
+            <div class="input-field col-s12">
+              <label for="">Email</label>
+              <input type="text" name="email" formControlName="email"
+                placeholder="Ingresa tu correo" class="form-control">
+            </div>
+
+            <br>
+
+            <div class="form-group">
+              <label for="">Tarjeta</label>
+              <input type="text" name="tarjeta" formControlName="tarjeta"
+                placeholder="Tarjeta" class="form-control">
+            </div>
+
+            <br>
+            
+
+            <button class="btn btn-primary" (Click)="addUser(conctacForm)">Enviar</button>
+          </div>
+            
+          </form>
+    </div>
+
+    
+    
+    </div>
+    <div style="background-color:#fdf1e2" class="container back">
+      <img class="logo" style="background-color: #fdf1e2;" src="img-fluid"  src="http://sigmatest.sigmastorage.online/sources/logo.png" alt="">
+      
+  </div>
+
+</body>

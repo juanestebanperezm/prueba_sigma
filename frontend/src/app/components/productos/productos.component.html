@@ -1,0 +1,52 @@
+<body>
+    <div class="container">
+        <img class="img-fluid" src="http://sigmatest.sigmastorage.online/sources/bg-1.png" alt="">
+    </div>
+
+
+    <div class="card container">
+
+
+        <div class="card-body">
+            <div *ngFor="let x of producto">
+
+               <div class="container imagen">
+                <img class="img-fluid"   src="{{x.image}}" alt="">
+               </div>
+                
+                <div  class="container texto">
+                    <h1 class="titulo card-title text-uppercase">{{x.name}}</h1>
+                    <div class="precio">
+                        <h5 class=precio>${{x.price}}</h5>
+                        <h5 class="lead">{{x.tax}} imp</h5>
+                        <h5 *ngIf="now==20">Descuento {{now}}%</h5>
+                        <h5 *ngIf="now!==20">No Aplica</h5>
+                    </div>
+                    <h6 class="lead">Descripcion</h6>
+                    <hr style="width: 500px;">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis sit, ipsum porro et</p>
+
+                    <a class="btn btn-primary" routerLink="comprar">Comprar</a>
+                </div>
+
+
+                
+                
+            </div>
+
+           
+
+
+        </div>
+
+       
+        
+    </div>
+    
+    <div style="background-color:#fdf1e2" class="container back">
+        <img class="logo" style="background-color: #fdf1e2;" src="img-fluid"  src="http://sigmatest.sigmastorage.online/sources/logo.png" alt="">
+        
+    </div>
+    
+    
+</body>

@@ -1,0 +1,41 @@
+body{
+    background-color: #fdf1e2;
+}
+.back{
+    margin: auto;
+    width: 25%;
+    
+    padding: 10px;
+    
+}
+
+.logo{
+    width: 70%;
+    height: 70%;
+}
+
+.titulo{
+    position: relative;
+    bottom: 50px;
+    font-size: 50px;
+}
+
+.precio{
+    position: relative;
+    bottom: 20px;
+}
+
+.texto{
+position: relative;
+  left: 450px;
+  bottom: 100px;
+  
+ 
+}
+
+.imagen{
+    position: relative;
+    right: 300px;
+    bottom: -100px;
+    width: 40%;
+}
